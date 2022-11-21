@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var jugador_1 = require("./jugador");
+var masajista_1 = require("./masajista");
+var entrenador_1 = require("./entrenador");
+var jugadorUno = new jugador_1.Jugador("Mariano", "Suarez", "jugador", 11, 85, true);
+var jugadorDos = new jugador_1.Jugador("Jorge", "Gomez", "jugador", 9, 73, true);
+var jugadorTres = new jugador_1.Jugador("Lucas", "Mamani", "jugador", 10, 95, true);
+var jugadorCuatro = new jugador_1.Jugador("Esteban", "Arguello", "jugador", 22, 82, false);
+var nuevaListaJugadores = [jugadorUno, jugadorDos, jugadorTres, jugadorCuatro];
+var masajistaUno = new masajista_1.Masajista(nuevaListaJugadores);
+var entrenadorUno = new entrenador_1.Entrenador("Marcos", "Gimenez", "Entrenador", nuevaListaJugadores);
+masajistaUno.tratarJugador(jugadorDos);
+entrenadorUno.titularizar(jugadorCuatro);
+console.log(entrenadorUno);
+console.log(jugadorUno);
+console.log(masajistaUno);
